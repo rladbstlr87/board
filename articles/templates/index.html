@@ -3,5 +3,23 @@
 
 <!-- 게시판의 ui 구조는 유지하고 글목록, 상세페이지 보는 자리 구멍만 뚫어서 인덱스, 디테일 집어넣게 될것 -->
 {% block body %}
-<h1>index</h1>
+    <h1>index</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>제목</th>
+                <th>내용</th>
+                <th>작성시간</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in articles %}
+            <tr>
+                <td>{{article.title}}</td>
+                <td>{{article.content}}</td>
+                <td>{{article.created_at}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
