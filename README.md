@@ -8,3 +8,4 @@
 ---
 5. `django-admin startapp articles`
 6. `settings.py`에서 앱폴더 등록
+---
