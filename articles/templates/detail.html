@@ -13,5 +13,6 @@
         </div>
     </div>
 
-    <a href="{% url 'articles:delete' article.id %}" class="btn btn-danger">delete</a>
+    <a href="{% url 'articles:delete' article.id %}" class="btn btn-danger mt-2">delete</a>
+    <a href="{% url 'articles:edit' article.id %}" class="btn btn-warning mt-2">update</a>
 {% endblock %}
