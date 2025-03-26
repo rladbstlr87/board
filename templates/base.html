@@ -10,15 +10,20 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <!-- {% app_name:view_name에 해당하는 url 중괄호닫음 은 /articles/로 만들어줌 -->
-          <a class="navbar-brand" href="{% url 'articles:index' %}">board</a>
+          <a class="navbar-brand" href="{% url 'articles:index' %}">Home</a>
+          <a href="" class="nav-link disabled">
+            <h1>
+              {{user}}
+            </h1>
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link" href="{% url 'articles:new' %}">Create</a>
-              <a class="nav-link" href="#">Login</a>
-              <a class="nav-link" href="#">Sign up</a>
+              <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
+              <a class="nav-link" href="{% url 'accounts:signup' %}">Sign up</a>
             </div>
           </div>
         </div>
